@@ -4,17 +4,17 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EntityFrameworkCore.First.WebApi.Controllers;
-[Route("api/[controller]")]
+[Route("api/[controller]/[action]")]
 [ApiController]
 public class TodosController : ControllerBase
 {
-    [HttpGet]
-    public IActionResult Add(string work, DateTime dateToBeCompleted)
+    [HttpPost] //Create
+    public IActionResult Add(AddTodoDto request)
     {
         Todo todo = new()
         {
-            Work = work,
-            DateToBeCompleted = dateToBeCompleted,
+            Work = request.Work,
+            DateToBeCompleted =request. DateToBeCompleted,
             CreationDate = DateTime.Now
         };
 
@@ -25,7 +25,40 @@ public class TodosController : ControllerBase
         context.SaveChanges();
 
         return Ok(new { Id = todo.Id });
-
-
     }
+
+    [HttpGet]
+    public IActionResult GetAll()
+    {
+        AppDbContext context = new();
+        IEnumerable<Todo> todos = context.Todos.OrderByDescending(p=>p.CreationDate).ToList();
+        return Ok(todos);
+    }
+
+    [HttpGet("{id}")]
+
+    public IActionResult GetById(int id)
+    {
+        AppDbContext context = new();
+        Todo? todo =  context.Todos.Find(id);
+
+        if (todo is null)
+        {
+            return BadRequest(new {Message="Todo kaydı bulunamadı!"});
+        }
+
+        return Ok(todo);
+    }
+
+
+}
+
+
+
+
+
+public sealed class AddTodoDto
+{
+    public string Work { get; set; } = string.Empty;
+    public DateTime DateToBeCompleted { get; set; }
 }
