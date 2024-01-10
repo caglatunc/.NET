@@ -1,6 +1,6 @@
 ﻿namespace EntityFrameworkCore.First.WebApi.Models;
 
-public class Todo
+public sealed class Todo
 {
     public int Id { get; set; } //int default değeri 0
     public string Work { get; set; } = string.Empty;//Null olmaması gereken alanlara default değer atadık.
