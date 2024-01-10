@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkCore.First.WebApi", "EntityFrameworkCore.First.WebApi\EntityFrameworkCore.First.WebApi.csproj", "{B1BD9775-B1EC-44BF-9EDD-32EAA2A9EBAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkCore.First.WebApi", "EntityFrameworkCore.First.WebApi\EntityFrameworkCore.First.WebApi.csproj", "{B1BD9775-B1EC-44BF-9EDD-32EAA2A9EBAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkCore.Auth.WebApi", "EntityFrameworkCore.Auth.WebApi\EntityFrameworkCore.Auth.WebApi.csproj", "{21AAE11C-B34A-49BA-B386-0361A750943C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B1BD9775-B1EC-44BF-9EDD-32EAA2A9EBAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1BD9775-B1EC-44BF-9EDD-32EAA2A9EBAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1BD9775-B1EC-44BF-9EDD-32EAA2A9EBAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21AAE11C-B34A-49BA-B386-0361A750943C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21AAE11C-B34A-49BA-B386-0361A750943C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21AAE11C-B34A-49BA-B386-0361A750943C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21AAE11C-B34A-49BA-B386-0361A750943C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
