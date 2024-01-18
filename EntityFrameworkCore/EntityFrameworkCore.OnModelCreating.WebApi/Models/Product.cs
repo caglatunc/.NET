@@ -1,23 +1,23 @@
-﻿namespace EntityFrameworkCore.OnModelCreating.WebApi.Models;
+﻿using EntityFrameworkCore.OnModelCreating.WebApi.Abstractions;
 
-public sealed class Product
+namespace EntityFrameworkCore.OnModelCreating.WebApi.Models;
+
+public sealed class Product:Entity
 {
-    public Guid Id { get; set; }
     public string Name { get; set; } = string.Empty;
     public decimal Price { get; set; }
     public Guid CategoryId { get; set; }
     public Category? Category { get; set; } 
 }
 
-public sealed class Category
+public sealed class Category : Entity
 {
-    public Guid Id { get; set; }
     public string Name { get; set; } = string.Empty;
+   
 }
 
-public sealed class User 
+public sealed class User : Entity
 {
-    public Guid Id { get; set; }
     public string FirstName { get; set; } = string.Empty;
     public string LastName { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
