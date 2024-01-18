@@ -75,22 +75,22 @@ public sealed class ValuesController : ControllerBase
     [HttpGet("GetAll")]
     public IActionResult GetAll()
     {
-        //List<Product>products=
-        //    _context.Products
-        //    .Include(p=>p.AdditionalProduct)
-        //    .ToList();
+        List<Product> products =
+            _context.Products
+            .Include(p => p.AdditionalProduct)
+            .ToList();
 
-        List<Product> products = (from p in _context.Products
-                                  join ad in _context.AdditionalProducts on p.Id equals ad.ProductId
-                                  join c in _context.Categories on p.CategoryId equals c.Id
-                                  select new Product()
-                                  {
-                                      Id = p.Id,
-                                      AdditionalProduct = ad,
-                                      CategoryId = p.CategoryId,
-                                      Category = c,
-                                      Name = p.Name
-                                  }).ToList();
+        //List<Product> products = (from p in _context.Products
+        //                          join ad in _context.AdditionalProducts on p.Id equals ad.ProductId
+        //                          join c in _context.Categories on p.CategoryId equals c.Id
+        //                          select new Product()
+        //                          {
+        //                              Id = p.Id,
+        //                              AdditionalProduct = ad,
+        //                              CategoryId = p.CategoryId,
+        //                              Category = c,
+        //                              Name = p.Name
+        //                          }).ToList();
 
         //Bu şekilde özelleştrilmiş obje halinede getirebiliriz.
         //var products = (from p in _context.Products
@@ -103,7 +103,7 @@ public sealed class ValuesController : ControllerBase
         //                             Description = ad.Description,
         //                             Price= ad.Price,
         //                             CategoryName = c.Name,
-                                      
+
         //                          }).ToList();
 
         return Ok(products);
