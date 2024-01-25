@@ -1,0 +1,17 @@
+@EntityFrameworkCore.IEntityTypeConfiguration.WebApi_HostAddress = http://localhost:5050
+
+GET https://localhost:7219/api/Values/Get
+Accept: application/json
+
+###
+
+GET https://localhost:7219/api/Values/GeSort?reverse=false
+Accept: application/json
+###
+GET https://localhost:7219/api/Values/SeedData
+Accept: application/json
+
+
+###
+GET https://localhost:7219/api/Values/GetAllProduct
+Accept: application/json
