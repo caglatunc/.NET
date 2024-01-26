@@ -21,6 +21,27 @@ namespace EntityFrameworkCore.RepositoryPattern.WebApi.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("EntityFrameworkCore.RepositoryPattern.WebApi.Models.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Orders");
+                });
+
             modelBuilder.Entity("EntityFrameworkCore.RepositoryPattern.WebApi.Models.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -38,6 +59,27 @@ namespace EntityFrameworkCore.RepositoryPattern.WebApi.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("EntityFrameworkCore.RepositoryPattern.WebApi.Models.ShoppingCart", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ShoppingCarts");
+                });
+
             modelBuilder.Entity("EntityFrameworkCore.RepositoryPattern.WebApi.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -53,6 +95,28 @@ namespace EntityFrameworkCore.RepositoryPattern.WebApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("EntityFrameworkCore.RepositoryPattern.WebApi.Models.Order", b =>
+                {
+                    b.HasOne("EntityFrameworkCore.RepositoryPattern.WebApi.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("EntityFrameworkCore.RepositoryPattern.WebApi.Models.ShoppingCart", b =>
+                {
+                    b.HasOne("EntityFrameworkCore.RepositoryPattern.WebApi.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
                 });
 #pragma warning restore 612, 618
         }

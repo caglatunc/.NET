@@ -7,39 +7,41 @@ namespace EntityFrameworkCore.RepositoryPattern.WebApi.Repositories;
 public class Repository<T>: IRepository<T>
     where T : Entity
 {
-    public readonly AppDbContext context;
+    public readonly AppDbContext _context;
+    private DbSet<T> Entity;
 
     public Repository(AppDbContext context)
     {
-        this.context = context;
+       _context = context;
+        Entity = _context.Set<T>();
     }
     
     public int Add(T entity)
     {
-        context.Set<T>().Add(entity);
-        context.SaveChanges();
+        Entity.Add(entity);
+        _context.SaveChanges();
 
         return entity.Id;
     }
 
     public List<T> GetAll()
     {
-        return context.Set<T>().ToList();
+        return Entity.ToList();
     }
 
     public void Update(T entity)
     {
-        context.Set<T>().Update(entity);
-        context.SaveChanges();
+        Entity.Update(entity);
+        _context.SaveChanges();
     }
 
     public void DeleteById(int id)
     {
-        T? entity = context.Set<T>().Find(id);
+        T? entity = Entity.Find(id);
         if (entity is not null)
         {
-            context.Remove(entity);
-            context.SaveChanges();
+            _context.Remove(entity);
+            _context.SaveChanges();
         }
 
     }
