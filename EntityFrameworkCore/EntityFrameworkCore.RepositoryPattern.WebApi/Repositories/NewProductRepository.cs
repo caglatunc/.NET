@@ -22,9 +22,17 @@ public class NewProductRepository : IProductRepository
         return new List<Product>();
     }
 
+    public int SaveChanges()
+    {
+        throw new NotImplementedException();
+    }
+
     public void Update(Product entity)
     {
         //MongoDb Update kodları
-
+    }
+    public int SaveCahnges()
+    {
+        return 0;
     }
 }

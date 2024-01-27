@@ -12,7 +12,7 @@ namespace EntityFrameworkCore.RepositoryPattern.WebApi.Controllers;
 public sealed class ShoppingCartsController(
     ShoppingCartRepository shoppingCartRepository,
     OrderRepository orderRepository,
-    AppDbContext context) : ControllerBase
+    UnitOfWork unitOfWork) : ControllerBase
 {
     [HttpPost]
     public IActionResult Add(AddShoppingCartDto request)
@@ -24,6 +24,7 @@ public sealed class ShoppingCartsController(
         };
 
         shoppingCartRepository.Add(shoppingCart);
+        unitOfWork.SaveChanges();
 
         return NoContent();
     }
@@ -38,30 +39,19 @@ public sealed class ShoppingCartsController(
     public IActionResult CreateOrder()
     {
         List<ShoppingCart> shoppingCarts = shoppingCartRepository.GetAll();
-
-        context.Database.BeginTransaction();
-        try
+        foreach (var cart in shoppingCarts)
         {
-            foreach(var cart in shoppingCarts)
-        {
-                Order order = new()
-                {
-                    ProductId = cart.ProductId,
-                    Quantity = cart.Quantity
-                };
-                orderRepository.Add(order);
+            Order order = new()
+            {
+                ProductId = cart.ProductId,
+                Quantity = cart.Quantity
+            };
+            orderRepository.Add(order);
 
-                throw new ArgumentException("Hata!");
-                shoppingCartRepository.DeleteById(cart.Id);
-            }
-
-            context.Database.CommitTransaction();
+           // throw new ArgumentException("Hata!");
+            shoppingCartRepository.DeleteById(cart.Id);
         }
-        catch (Exception ex)
-        {
-            context.Database.RollbackTransaction();
-            throw ex;
-        }
+        unitOfWork.SaveChanges();
 
         return NoContent();    
     }

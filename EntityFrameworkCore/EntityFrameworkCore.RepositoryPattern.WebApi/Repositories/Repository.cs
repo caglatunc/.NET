@@ -19,7 +19,7 @@ public class Repository<T>: IRepository<T>
     public int Add(T entity)
     {
         Entity.Add(entity);
-        _context.SaveChanges();
+       // _context.SaveChanges();
 
         return entity.Id;
     }
@@ -32,7 +32,7 @@ public class Repository<T>: IRepository<T>
     public void Update(T entity)
     {
         Entity.Update(entity);
-        _context.SaveChanges();
+       // _context.SaveChanges();
     }
 
     public void DeleteById(int id)
@@ -41,8 +41,8 @@ public class Repository<T>: IRepository<T>
         if (entity is not null)
         {
             _context.Remove(entity);
-            _context.SaveChanges();
+            //_context.SaveChanges();
         }
-
     }
+  
 }
