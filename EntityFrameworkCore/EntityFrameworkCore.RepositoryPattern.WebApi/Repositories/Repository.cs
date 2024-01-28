@@ -24,6 +24,12 @@ public class Repository<T>: IRepository<T>
         return entity.Id;
     }
 
+    public async Task<int> AddAsync(T entity)
+    {
+        await Entity.AddAsync(entity);
+        return entity.Id;
+    }
+
     public List<T> GetAll()
     {
         return Entity.ToList();
@@ -44,5 +50,4 @@ public class Repository<T>: IRepository<T>
             //_context.SaveChanges();
         }
     }
-  
 }

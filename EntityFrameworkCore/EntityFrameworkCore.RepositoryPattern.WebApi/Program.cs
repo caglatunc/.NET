@@ -1,6 +1,7 @@
 using EntityFrameworkCore.RepositoryPattern.WebApi.Context;
 using EntityFrameworkCore.RepositoryPattern.WebApi.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +14,7 @@ builder.Services.AddScoped<IProductRepository,ProductRepository>();
 builder.Services.AddScoped<UserRepository>();
 builder.Services.AddScoped<ShoppingCartRepository>();
 builder.Services.AddScoped<OrderRepository>();
-builder.Services.AddScoped<UnitOfWork>();
+builder.Services.AddScoped<IUnitOfWork>(srv => srv.GetRequiredService<AppDbContext>());
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

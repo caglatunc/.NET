@@ -12,10 +12,10 @@ namespace EntityFrameworkCore.RepositoryPattern.WebApi.Controllers;
 public sealed class ShoppingCartsController(
     ShoppingCartRepository shoppingCartRepository,
     OrderRepository orderRepository,
-    UnitOfWork unitOfWork) : ControllerBase
+    IUnitOfWork unitOfWork) : ControllerBase
 {
     [HttpPost]
-    public IActionResult Add(AddShoppingCartDto request)
+    public async Task<IActionResult> Add(AddShoppingCartDto request)
     {
         ShoppingCart shoppingCart = new()
         {
@@ -23,8 +23,8 @@ public sealed class ShoppingCartsController(
             Quantity = request.Quantity
         };
 
-        shoppingCartRepository.Add(shoppingCart);
-        unitOfWork.SaveChanges();
+        await shoppingCartRepository.AddAsync(shoppingCart);
+        await unitOfWork.SaveChangesAsync();
 
         return NoContent();
     }

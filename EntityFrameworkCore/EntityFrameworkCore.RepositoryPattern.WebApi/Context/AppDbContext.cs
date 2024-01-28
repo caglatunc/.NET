@@ -1,9 +1,10 @@
 ﻿using EntityFrameworkCore.RepositoryPattern.WebApi.Models;
+using EntityFrameworkCore.RepositoryPattern.WebApi.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace EntityFrameworkCore.RepositoryPattern.WebApi.Context;
 
-public sealed class AppDbContext:DbContext
+public sealed class AppDbContext:DbContext, IUnitOfWork
 {
     public AppDbContext(DbContextOptions options): base(options)
     {

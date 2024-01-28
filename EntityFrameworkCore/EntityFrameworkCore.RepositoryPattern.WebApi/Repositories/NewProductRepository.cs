@@ -35,4 +35,9 @@ public class NewProductRepository : IProductRepository
     {
         return 0;
     }
+
+    public Task<int> AddAsync(Product entity)
+    {
+        throw new NotImplementedException();
+    }
 }
