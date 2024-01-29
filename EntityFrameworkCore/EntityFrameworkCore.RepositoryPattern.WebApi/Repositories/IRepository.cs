@@ -5,9 +5,9 @@ namespace EntityFrameworkCore.RepositoryPattern.WebApi.Repositories;
 public interface IRepository<T>
     where T : Entity
 {
-    Task<int> AddAsync(T entity);
+    Task<int> AddAsync(T entity, CancellationToken cancellationToken = default);
     int Add(T entity);
-    List<T> GetAll();
+    Task<List<T>> GetAllAsync(CancellationToken cancellationToken = default);
     void Update(T entity);
     void DeleteById(int id);
 }

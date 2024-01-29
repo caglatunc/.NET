@@ -15,7 +15,7 @@ public sealed class ShoppingCartsController(
     IUnitOfWork unitOfWork) : ControllerBase
 {
     [HttpPost]
-    public async Task<IActionResult> Add(AddShoppingCartDto request)
+    public async Task<IActionResult> Add(AddShoppingCartDto request, CancellationToken cancellationToken)
     {
         ShoppingCart shoppingCart = new()
         {
@@ -23,22 +23,22 @@ public sealed class ShoppingCartsController(
             Quantity = request.Quantity
         };
 
-        await shoppingCartRepository.AddAsync(shoppingCart);
-        await unitOfWork.SaveChangesAsync();
+        await shoppingCartRepository.AddAsync(shoppingCart, cancellationToken);
+        await unitOfWork.SaveChangesAsync(cancellationToken);
 
         return NoContent();
     }
 
     [HttpGet]
-    public IActionResult GetAll()
+    public async Task<IActionResult> GetAll()
     {
-        List<ShoppingCart> shoppingCarts = shoppingCartRepository.GetAll();
+        List<ShoppingCart> shoppingCarts = await shoppingCartRepository.GetAllAsync();
         return Ok(shoppingCarts);
     }
     [HttpGet]
-    public IActionResult CreateOrder()
+    public async Task<IActionResult> CreateOrder()
     {
-        List<ShoppingCart> shoppingCarts = shoppingCartRepository.GetAll();
+        List<ShoppingCart> shoppingCarts = await shoppingCartRepository.GetAllAsync();
         foreach (var cart in shoppingCarts)
         {
             Order order = new()

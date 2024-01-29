@@ -24,15 +24,15 @@ public class Repository<T>: IRepository<T>
         return entity.Id;
     }
 
-    public async Task<int> AddAsync(T entity)
+    public async Task<int> AddAsync(T entity, CancellationToken cancellationToken = default)
     {
-        await Entity.AddAsync(entity);
+        await Entity.AddAsync(entity, cancellationToken);
         return entity.Id;
     }
 
-    public List<T> GetAll()
+    public async Task<List<T>> GetAllAsync(CancellationToken cancellationToken = default)
     {
-        return Entity.ToList();
+        return await Entity.ToListAsync(cancellationToken);
     }
 
     public void Update(T entity)

@@ -23,8 +23,8 @@ public sealed class ProductsController(IProductRepository productRepository): Co
     }
 
     [HttpGet]
-    public IActionResult GetAll()
+    public async  Task<IActionResult> GetAll()
     {
-        return Ok(productRepository.GetAll());
+        return Ok(await productRepository.GetAllAsync());
     }
 }

@@ -16,13 +16,13 @@ public class NewProductRepository : IProductRepository
        
     }
 
-    public List<Product> GetAll()
+    public List<Product> GetAll(CancellationToken cancellationToken = default)
     {
         //MongoDbList Kodları
         return new List<Product>();
     }
 
-    public int SaveChanges()
+    public int SaveChanges(CancellationToken cancellationToken = default)
     {
         throw new NotImplementedException();
     }
@@ -31,12 +31,17 @@ public class NewProductRepository : IProductRepository
     {
         //MongoDb Update kodları
     }
-    public int SaveCahnges()
+    public int SaveCahnges(CancellationToken cancellationToken = default)
     {
         return 0;
     }
 
-    public Task<int> AddAsync(Product entity)
+    public Task<int> AddAsync(Product entity, CancellationToken cancellationToken = default)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<List<Product>> GetAllAsync(CancellationToken cancellationToken = default)
     {
         throw new NotImplementedException();
     }
