@@ -1,0 +1,6 @@
+@ClassStructures.WebAPI_HostAddress = http://localhost:5031
+
+GET {{ClassStructures.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
