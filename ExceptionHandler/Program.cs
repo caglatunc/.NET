@@ -1,4 +1,13 @@
+using ExceptionHandler.Middlewares;
+using Microsoft.AspNetCore.Http;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<ExceptionMiddleware>();
+
+//.NET 8 de kullanýlan hali.
+//builder.Services.AddExceptionHandler<Net8ExceptionMiddleware
+//builder.Services.AddProblemDetails(); 
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -12,18 +21,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.Use(async (context, next) =>
-{
-    try
-    {
-        await next(context);
-    }
-    catch (Exception ex)
-    {
-        context.Response.ContentType = "application/json";
-        await context.Response.WriteAsync(ex.Message);
-    }
-});
+//app.UseExceptionHandler(); .NET 8 de kullanýlan hali.
+
+app.UseException();//Bu extension method ile ExceptionMiddleware sýnýfýný kullanýma açtýk.
 
 app.UseHttpsRedirection();
 

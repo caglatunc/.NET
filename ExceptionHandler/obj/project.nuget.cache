@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Q6n1bAkOifwx0LXoU/xvwX1n+ZTiiNCB0sF5IghwVnvzAn+KTJChnpbrFUAF9eHyLiVo4d/GrRb8cDsSE3U3nw==",
+  "dgSpecHash": "EdKvVqRU90jFk0oqz/4/de8lduT9hDlWxv/lN26THn0MzeJqkOWg/Ckz89gk8xGF6oVP5HeM7wGarJx9MgwRsw==",
   "success": true,
   "projectFilePath": "C:\\.NET\\ExceptionHandler\\ExceptionHandler.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ercan\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\ercan\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\ercan\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\ercan\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\ercan\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\ercan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
