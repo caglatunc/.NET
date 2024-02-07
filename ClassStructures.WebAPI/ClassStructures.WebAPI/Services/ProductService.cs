@@ -8,7 +8,6 @@ namespace ClassStructures.WebAPI.Services;
 public class ProductService
 {
     public static List<Product> products = new();
-
     public Result<List<Product>> GetAll()
     {
         return products;
@@ -21,7 +20,6 @@ public class ProductService
             price:request.Price);
 
         products.Add(product);
-
         return "Product addition process successful!";
     }
 
@@ -45,7 +43,6 @@ public class ProductService
 
         return "The product sale process was successful!";
     }
-
     public Result<Guid> AddStock(Guid productId, int quantity)
     {
         Product? product = products.FirstOrDefault(p => p.Id == productId);
