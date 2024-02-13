@@ -47,9 +47,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.9.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.2, )"
             }
           },
           "imports": [
@@ -112,6 +120,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.1, )"
@@ -178,6 +190,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -227,6 +245,9 @@
               },
               "C:\\.NET\\NTierArchitecture\\NTierArchitecture.DataAccess\\NTierArchitecture.DataAccess.csproj": {
                 "projectPath": "C:\\.NET\\NTierArchitecture\\NTierArchitecture.DataAccess\\NTierArchitecture.DataAccess.csproj"
+              },
+              "C:\\.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj": {
+                "projectPath": "C:\\.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj"
               }
             }
           }
@@ -241,6 +262,18 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

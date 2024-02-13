@@ -3,7 +3,6 @@
 public sealed record UpdateStudentDto(
     Guid Id,
     string FirstName,
-    string Lastname,
-    int StudentNumber,
+    string LastName,
     string IdentityNumber,
     Guid ClassRoomId);

@@ -10,3 +10,4 @@ C:\.NET\NTierArchitecture\NTierArchitecture.Entities\obj\Debug\net8.0\NTierArchi
 C:\.NET\NTierArchitecture\NTierArchitecture.Entities\obj\Debug\net8.0\refint\NTierArchitecture.Entities.dll
 C:\.NET\NTierArchitecture\NTierArchitecture.Entities\obj\Debug\net8.0\NTierArchitecture.Entities.pdb
 C:\.NET\NTierArchitecture\NTierArchitecture.Entities\obj\Debug\net8.0\ref\NTierArchitecture.Entities.dll
+C:\.NET\NTierArchitecture\NTierArchitecture.Entities\obj\Debug\net8.0\NTierArchitecture.Entities.csproj.AssemblyReference.cache

@@ -1,5 +1,6 @@
 ﻿using NTierArchitecture.DataAccess.Context;
 using NTierArchitecture.Entities.Models;
+using System.Linq.Expressions;
 
 namespace NTierArchitecture.DataAccess.Repositories;
 
@@ -16,13 +17,13 @@ public sealed class ClassRoomRepository(AppDbContext context) : IClassRoomReposi
        ClassRoom? student = GetClassRoomById(Id);
         if (student is not null)
         {
-            context.Remove(student);
+            student.IsDeleted = true; 
             context.SaveChanges();
         }
     }
-    public List<ClassRoom> GetAll()
+    public IQueryable<ClassRoom> GetAll()
     {
-       return context.ClassRooms.ToList();
+       return context.ClassRooms.AsQueryable();
     }
 
     public ClassRoom? GetClassRoomById(Guid classRoomId)
@@ -35,4 +36,10 @@ public sealed class ClassRoomRepository(AppDbContext context) : IClassRoomReposi
        context.Update(student);
        context.SaveChanges();
     }
+    public bool Any(Expression<Func<ClassRoom, bool>> predicate)
+    {
+        return context.ClassRooms.Any(predicate);
+    }
+
+
 }

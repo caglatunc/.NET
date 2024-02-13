@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,6 +12,7 @@ public interface IClassRoomRepository
     void Create(ClassRoom student);
     void Update(ClassRoom student);
     void DeleteById(Guid Id);
-    List<ClassRoom> GetAll();
+    IQueryable<ClassRoom> GetAll();
     ClassRoom? GetClassRoomById(Guid studentId);
+    bool Any(Expression<Func<ClassRoom, bool>> predicate);
 }
