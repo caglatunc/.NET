@@ -41,6 +41,9 @@ builder.Services.AddIdentity<AppUser, IdentityRole<Guid>>(options =>
 {
     options.Password.RequiredLength = 1;
     options.Password.RequireDigit = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireLowercase = false;
 
 })
     .AddEntityFrameworkStores<AppDbContext>();//Manager classlarýnýn  hangi db ile çalýþtýðýný vermek için kullanýyoruz.
@@ -49,11 +52,12 @@ builder.Services.AddIdentity<AppUser, IdentityRole<Guid>>(options =>
 //Dependency Injection
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
 builder.Services.AddScoped<IClassRoomRepository, ClassRoomRepository>();
+builder.Services.AddScoped<AuthService>();
 
 builder.Services.AddScoped<IStudentService, StudentManager>();
 builder.Services.AddScoped<IClassRoomService, ClassRoomManager>();
 
-builder.Services.AddScoped<IAuthService, AuthService>();
+
 builder.Services.AddScoped<ITokenService, TokenManager>();
 
 builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
@@ -110,19 +114,18 @@ app.MapControllers();
 using (var scope = app.Services.CreateScope())
   {
         var userManager= scope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
-        var user = new AppUser
-        {
-            FirstName = "Çaðla",
-            LastName = "Tunç Savaþ",
-            Email = "caglatuncsavas@gmail.com",
-            UserName = "caglatuncsavas"
-        };
         if (!userManager.Users.Any())
         {
-            await userManager.CreateAsync(user, "Password12*");
-        }
+            AppUser appUser = new()
+            {
+                FirstName = "Çaðla",
+                LastName = "Tunç Savaþ",
+                Email = "caglatuncsavas@gmail.com",
+                UserName = "caglatuncsavas"
+            };
+            userManager.CreateAsync(appUser, "1").Wait();
+        }   
     }
-    await next();
 
 
 app.Run();

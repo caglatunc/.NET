@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using NTierArchitecture.Business.Constants;
 using NTierArchitecture.Business.Validator;
 using NTierArchitecture.Entities.DTOs;
@@ -11,36 +12,25 @@ public sealed class AuthService(
     UserManager<AppUser> userManager,
     TokenManager tokenManager) 
 {
-    public async Task<string> Login(LoginDto request)
+    public async Task<bool> LoginAsync(LoginDto request)
     {
-        LoginDtoValidator validator = new();
-        ValidationResult result = validator.Validate(request);
-        if (!result.IsValid)
+        AppUser? appUser =
+            await userManager.Users
+            .FirstOrDefaultAsync(p =>
+            p.UserName == request.UserNameOrEmail ||
+            p.Email == request.UserNameOrEmail);
+
+        if(appUser is null)
         {
-            throw new ValidationException(result.Errors);
+            throw new ArgumentException(MessageConstants.DataNotFound);
         }
 
-        AppUser? appUser = await userManager.FindByNameAsync(request.UserNameOrEmail);
-        if (appUser == null)
-        {
-            appUser = await userManager.FindByEmailAsync(request.UserNameOrEmail);
-            if (appUser == null)
-            {
-                throw new ArgumentException(MessageConstants.DataNotFound);
-            }
-        }
-
-        bool result2
-          = await userManager.CheckPasswordAsync(appUser, request.Password);
-        if (!result2)
+        //Kullanıcı varsa şifreyi kontrol etmemiz lazım.
+        bool result = await userManager.CheckPasswordAsync(appUser, request.Password);
+        if (!result)
         {
             throw new ArgumentException(MessageConstants.PasswordIsWrong);
         }
-
-        return tokenManager.CreateToken(appUser);
-        
+            return true;
     }
-  
-
-
 }
