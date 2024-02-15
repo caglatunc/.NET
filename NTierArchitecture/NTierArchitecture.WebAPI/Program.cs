@@ -13,6 +13,11 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
+
 builder.Services.AddAuthentication().AddJwtBearer(options =>
 {
     options.TokenValidationParameters = new()
@@ -28,7 +33,6 @@ builder.Services.AddAuthentication().AddJwtBearer(options =>
 });
 
 builder.Services.AddAuthorization();
-
 
 //DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -58,10 +62,9 @@ builder.Services.AddScoped<IStudentService, StudentManager>();
 builder.Services.AddScoped<IClassRoomService, ClassRoomManager>();
 
 
-builder.Services.AddScoped<ITokenService, TokenManager>();
+builder.Services.AddScoped<IJwtProvider, JwtProvider>();
 
 builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
-
 
 
 #region Presentation
@@ -110,6 +113,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.UseCors();
 
 using (var scope = app.Services.CreateScope())
   {
@@ -126,7 +130,6 @@ using (var scope = app.Services.CreateScope())
             userManager.CreateAsync(appUser, "1").Wait();
         }   
     }
-
 
 app.Run();
 

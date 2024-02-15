@@ -266,9 +266,13 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
+            "Bogus": {
+              "target": "Package",
+              "version": "[35.4.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[8.0.1, )"
+              "version": "[8.0.2, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",

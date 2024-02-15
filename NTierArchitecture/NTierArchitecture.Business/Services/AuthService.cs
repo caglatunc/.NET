@@ -10,9 +10,9 @@ namespace NTierArchitecture.Business.Services;
 
 public sealed class AuthService(
     UserManager<AppUser> userManager,
-    TokenManager tokenManager) 
+    IJwtProvider jwtProvider) 
 {
-    public async Task<bool> LoginAsync(LoginDto request)
+    public async Task<string> LoginAsync(LoginDto request)
     {
         AppUser? appUser =
             await userManager.Users
@@ -31,6 +31,6 @@ public sealed class AuthService(
         {
             throw new ArgumentException(MessageConstants.PasswordIsWrong);
         }
-            return true;
+            return jwtProvider.CreateToken();
     }
 }

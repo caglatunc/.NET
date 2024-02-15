@@ -9,4 +9,5 @@ public interface IStudentService
     string Update(UpdateStudentDto request);
     string DeleteById(Guid id);
     List<Student> GetAll();
+    List<Student> GetAllByClassRoomId(Guid classRoomId);
 }
