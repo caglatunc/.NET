@@ -36,14 +36,14 @@ public sealed class StudentRepository(AppDbContext context) : IStudentRepository
     } 
     public int GetNewStudentNumber()
     {
-       int lastStudentNumber = context.Students.Max(p=>p.StudentNumber);
-        if(lastStudentNumber <= 100) lastStudentNumber = 100;
+        int lastStudentNumber = context.Students.Max(p => p.StudentNumber);
+        if (lastStudentNumber <= 100) lastStudentNumber = 100;
         lastStudentNumber++;
 
         return lastStudentNumber;
     }
     public bool Any(Expression<Func<Student, bool>> predicate)
     {
-        return context.Students.Any(predicate);
+        return context.Students.AsNoTracking().Any(predicate);
     }
 }

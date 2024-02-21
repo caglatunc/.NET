@@ -13,8 +13,4 @@ public sealed class Student :Entity
     public Guid ClassRoomId { get; set; }
     public ClassRoom? ClassRoom { get; set; }
 
-    public static object Skip(int v)
-    {
-        throw new NotImplementedException();
-    }
 }

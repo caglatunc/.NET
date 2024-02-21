@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NTierArchitecture.DataAccess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0baa544c5931b1c13b2ec0279007828e7ca82aba")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e2978a2567d638b2d959749bdc1a214f5b0a9a2")]
 [assembly: System.Reflection.AssemblyProductAttribute("NTierArchitecture.DataAccess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NTierArchitecture.DataAccess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
