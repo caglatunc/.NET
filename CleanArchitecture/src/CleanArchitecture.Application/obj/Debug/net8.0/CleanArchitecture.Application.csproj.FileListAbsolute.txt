@@ -1,0 +1,16 @@
+C:\.NET\CleanArchitecture\src\CleanArchitecture.Application\bin\Debug\net8.0\CleanArchitecture.Application.deps.json
+C:\.NET\CleanArchitecture\src\CleanArchitecture.Application\bin\Debug\net8.0\CleanArchitecture.Application.dll
+C:\.NET\CleanArchitecture\src\CleanArchitecture.Application\bin\Debug\net8.0\CleanArchitecture.Application.pdb
+C:\.NET\CleanArchitecture\src\CleanArchitecture.Application\bin\Debug\net8.0\CleanArchitecture.Domain.dll
+C:\.NET\CleanArchitecture\src\CleanArchitecture.Application\bin\Debug\net8.0\CleanArchitecture.Domain.pdb
+C:\.NET\CleanArchitecture\src\CleanArchitecture.Application\obj\Debug\net8.0\CleanArchitecture.Application.csproj.AssemblyReference.cache
+C:\.NET\CleanArchitecture\src\CleanArchitecture.Application\obj\Debug\net8.0\CleanArchitecture.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\.NET\CleanArchitecture\src\CleanArchitecture.Application\obj\Debug\net8.0\CleanArchitecture.Application.AssemblyInfoInputs.cache
+C:\.NET\CleanArchitecture\src\CleanArchitecture.Application\obj\Debug\net8.0\CleanArchitecture.Application.AssemblyInfo.cs
+C:\.NET\CleanArchitecture\src\CleanArchitecture.Application\obj\Debug\net8.0\CleanArchitecture.Application.csproj.CoreCompileInputs.cache
+C:\.NET\CleanArchitecture\src\CleanArchitecture.Application\obj\Debug\net8.0\CleanArchitecture.Application.sourcelink.json
+C:\.NET\CleanArchitecture\src\CleanArchitecture.Application\obj\Debug\net8.0\CleanArc.03AFA812.Up2Date
+C:\.NET\CleanArchitecture\src\CleanArchitecture.Application\obj\Debug\net8.0\CleanArchitecture.Application.dll
+C:\.NET\CleanArchitecture\src\CleanArchitecture.Application\obj\Debug\net8.0\refint\CleanArchitecture.Application.dll
+C:\.NET\CleanArchitecture\src\CleanArchitecture.Application\obj\Debug\net8.0\CleanArchitecture.Application.pdb
+C:\.NET\CleanArchitecture\src\CleanArchitecture.Application\obj\Debug\net8.0\ref\CleanArchitecture.Application.dll

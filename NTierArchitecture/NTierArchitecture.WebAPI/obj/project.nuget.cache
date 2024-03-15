@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TLTM5idqesRjm9i3/nHqGwDRyI23B+OgbkoimPgBABSq0ElFSnHGPmMFWiU/WRy4pUgmneV1DS3xwDeaRGiKdg==",
+  "dgSpecHash": "5a4uefffiP6YipYZ4aNqv6sTugBiHqocFeeQipcsLVB2qJHiHQfbo/kmul3TyRekGn7781eTJc27L2nEYyCjDw==",
   "success": true,
   "projectFilePath": "C:\\.NET\\NTierArchitecture\\NTierArchitecture.WebAPI\\NTierArchitecture.WebAPI.csproj",
   "expectedPackageFiles": [
