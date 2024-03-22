@@ -53,6 +53,18 @@
               "target": "Package",
               "version": "[8.0.5, )"
             },
+            "FluentEmail.Smtp": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.2.0, )"
@@ -120,6 +132,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FluentEmail.Smtp": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.3, )"
@@ -228,6 +248,84 @@
         }
       }
     },
+    "C:\\.NET\\CleanArchitecture\\src\\CleanArchitecture.Presentation\\CleanArchitecture.Presentation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\.NET\\CleanArchitecture\\src\\CleanArchitecture.Presentation\\CleanArchitecture.Presentation.csproj",
+        "projectName": "CleanArchitecture.Presentation",
+        "projectPath": "C:\\.NET\\CleanArchitecture\\src\\CleanArchitecture.Presentation\\CleanArchitecture.Presentation.csproj",
+        "packagesPath": "C:\\Users\\ercan\\.nuget\\packages\\",
+        "outputPath": "C:\\.NET\\CleanArchitecture\\src\\CleanArchitecture.Presentation\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ercan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\.NET\\CleanArchitecture\\src\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj": {
+                "projectPath": "C:\\.NET\\CleanArchitecture\\src\\CleanArchitecture.Application\\CleanArchitecture.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentEmail.Smtp": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\.NET\\CleanArchitecture\\src\\CleanArchitecture.WebAPI\\CleanArchitecture.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -257,6 +355,9 @@
               },
               "C:\\.NET\\CleanArchitecture\\src\\CleanArchitecture.Infrastructure\\CleanArchitecture.Infrastructure.csproj": {
                 "projectPath": "C:\\.NET\\CleanArchitecture\\src\\CleanArchitecture.Infrastructure\\CleanArchitecture.Infrastructure.csproj"
+              },
+              "C:\\.NET\\CleanArchitecture\\src\\CleanArchitecture.Presentation\\CleanArchitecture.Presentation.csproj": {
+                "projectPath": "C:\\.NET\\CleanArchitecture\\src\\CleanArchitecture.Presentation\\CleanArchitecture.Presentation.csproj"
               }
             }
           }
@@ -276,6 +377,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FluentEmail.Smtp": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

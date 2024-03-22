@@ -67,7 +67,6 @@ C:\.NET\CleanArchitecture\src\CleanArchitecture.WebAPI\obj\Debug\net8.0\CleanArc
 C:\.NET\CleanArchitecture\src\CleanArchitecture.WebAPI\obj\Debug\net8.0\CleanArchitecture.WebAPI.AssemblyInfoInputs.cache
 C:\.NET\CleanArchitecture\src\CleanArchitecture.WebAPI\obj\Debug\net8.0\CleanArchitecture.WebAPI.AssemblyInfo.cs
 C:\.NET\CleanArchitecture\src\CleanArchitecture.WebAPI\obj\Debug\net8.0\CleanArchitecture.WebAPI.csproj.CoreCompileInputs.cache
-C:\.NET\CleanArchitecture\src\CleanArchitecture.WebAPI\obj\Debug\net8.0\CleanArchitecture.WebAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\.NET\CleanArchitecture\src\CleanArchitecture.WebAPI\obj\Debug\net8.0\CleanArchitecture.WebAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\.NET\CleanArchitecture\src\CleanArchitecture.WebAPI\obj\Debug\net8.0\CleanArchitecture.WebAPI.sourcelink.json
 C:\.NET\CleanArchitecture\src\CleanArchitecture.WebAPI\obj\Debug\net8.0\staticwebassets.build.json
@@ -150,3 +149,10 @@ C:\.NET\CleanArchitecture\src\CleanArchitecture.WebAPI\bin\Debug\net8.0\ru\Micro
 C:\.NET\CleanArchitecture\src\CleanArchitecture.WebAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\.NET\CleanArchitecture\src\CleanArchitecture.WebAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\.NET\CleanArchitecture\src\CleanArchitecture.WebAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\.NET\CleanArchitecture\src\CleanArchitecture.WebAPI\bin\Debug\net8.0\MediatR.dll
+C:\.NET\CleanArchitecture\src\CleanArchitecture.WebAPI\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\.NET\CleanArchitecture\src\CleanArchitecture.WebAPI\bin\Debug\net8.0\CleanArchitecture.Presentation.dll
+C:\.NET\CleanArchitecture\src\CleanArchitecture.WebAPI\bin\Debug\net8.0\CleanArchitecture.Presentation.pdb
+C:\.NET\CleanArchitecture\src\CleanArchitecture.WebAPI\bin\Debug\net8.0\FluentEmail.Core.dll
+C:\.NET\CleanArchitecture\src\CleanArchitecture.WebAPI\bin\Debug\net8.0\FluentEmail.Smtp.dll
+C:\.NET\CleanArchitecture\src\CleanArchitecture.WebAPI\obj\Debug\net8.0\CleanArchitecture.WebAPI.MvcApplicationPartsAssemblyInfo.cs

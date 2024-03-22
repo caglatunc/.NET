@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "CleanArchitecture.WebAPI.Controllers.AuthController",
+    "ContainingType": "CleanArchitecture.Presentation.Controllers.AuthController",
     "Method": "Register",
     "RelativePath": "api/Auth/Register",
     "HttpMethod": "POST",
@@ -13,6 +13,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CleanArchitecture.Presentation.Controllers.AuthController",
+    "Method": "SendTestEmail",
+    "RelativePath": "api/Auth/SendTestEmail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]
