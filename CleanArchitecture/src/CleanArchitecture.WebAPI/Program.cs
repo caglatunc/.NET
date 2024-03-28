@@ -1,8 +1,12 @@
 using CleanArchitecture.Application;
 using CleanArchitecture.Application.Options;
 using CleanArchitecture.Infrastructure;
+using CleanArchitecture.WebAPI.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddExceptionHandler<ExceptionMiddleware>();
+builder.Services.AddProblemDetails();
 
 builder.Services.Configure<EmailOptions>(builder.Configuration.GetSection("Email"));
 
@@ -22,6 +26,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseExceptionHandler();
 
 app.UseHttpsRedirection();
 

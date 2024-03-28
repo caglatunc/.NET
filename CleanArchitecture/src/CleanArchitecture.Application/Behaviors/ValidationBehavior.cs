@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using FluentValidation.Results;
 using MediatR;
 
 namespace CleanArchitecture.Application.Behaviors;
@@ -29,8 +30,17 @@ public sealed class ValidationBehavior<TRequest, TResponse>(IEnumerable<IValidat
 
         if(errorDictionary.Any())
         {
-            var errors = errorDictionary.Select
+            var errors = errorDictionary.Select(s=> new ValidationFailure
+            {
+                PropertyName = s.Value,
+                ErrorCode = s.Key
+            });
+            throw new ValidationException(errors);
         }
+
+        var response = await next();
+
+        return response;
     }
 
 }
