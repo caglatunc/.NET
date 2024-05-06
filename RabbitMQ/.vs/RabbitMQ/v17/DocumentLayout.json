@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\.NET\\RabbitMQ\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A7B836C2-5708-42B7-8FB3-170411102D9F}|2.WorkQueues\\Worker\\Worker.csproj|c:\\.net\\rabbitmq\\2.workqueues\\worker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7B836C2-5708-42B7-8FB3-170411102D9F}|2.WorkQueues\\Worker\\Worker.csproj|solutionrelative:2.workqueues\\worker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B159E5CC-0B71-469D-B732-0EA560ADDCFF}|2.WorkQueues\\NewTask\\NewTask.csproj|c:\\.net\\rabbitmq\\2.workqueues\\newtask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B159E5CC-0B71-469D-B732-0EA560ADDCFF}|2.WorkQueues\\NewTask\\NewTask.csproj|solutionrelative:2.workqueues\\newtask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C6E6E85-D00B-4E9A-9A88-33052D091DB4}|1.HelloWorld\\Send\\Send.csproj|c:\\.net\\rabbitmq\\1.helloworld\\send\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C6E6E85-D00B-4E9A-9A88-33052D091DB4}|1.HelloWorld\\Send\\Send.csproj|solutionrelative:1.helloworld\\send\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF81F745-FE05-4AA1-B13C-6BC5095DA355}|1.HelloWorld\\Receive\\Receive.csproj|c:\\.net\\rabbitmq\\1.helloworld\\receive\\receive.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{FF81F745-FE05-4AA1-B13C-6BC5095DA355}|1.HelloWorld\\Receive\\Receive.csproj|solutionrelative:1.helloworld\\receive\\receive.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C6E6E85-D00B-4E9A-9A88-33052D091DB4}|1.HelloWorld\\Send\\Send.csproj|c:\\.net\\rabbitmq\\1.helloworld\\send\\send.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{4C6E6E85-D00B-4E9A-9A88-33052D091DB4}|1.HelloWorld\\Send\\Send.csproj|solutionrelative:1.helloworld\\send\\send.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{ADB6626F-BF7E-4EC6-BA6D-EB24EEC51737}|4.Routing\\ReceiveLogsDirect\\ReceiveLogsDirect.csproj|c:\\.net\\rabbitmq\\4.routing\\receivelogsdirect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADB6626F-BF7E-4EC6-BA6D-EB24EEC51737}|4.Routing\\ReceiveLogsDirect\\ReceiveLogsDirect.csproj|solutionrelative:4.routing\\receivelogsdirect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,65 +32,26 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\.NET\\RabbitMQ\\2.WorkQueues\\Worker\\Program.cs",
-              "RelativeDocumentMoniker": "2.WorkQueues\\Worker\\Program.cs",
-              "ToolTip": "C:\\.NET\\RabbitMQ\\2.WorkQueues\\Worker\\Program.cs",
-              "RelativeToolTip": "2.WorkQueues\\Worker\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAANAAAA",
+              "DocumentMoniker": "C:\\.NET\\RabbitMQ\\2.WorkQueues\\NewTask\\Program.cs",
+              "RelativeDocumentMoniker": "2.WorkQueues\\NewTask\\Program.cs",
+              "ToolTip": "C:\\.NET\\RabbitMQ\\2.WorkQueues\\NewTask\\Program.cs",
+              "RelativeToolTip": "2.WorkQueues\\NewTask\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T20:38:12.569Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\.NET\\RabbitMQ\\1.HelloWorld\\Send\\Program.cs",
-              "RelativeDocumentMoniker": "1.HelloWorld\\Send\\Program.cs",
-              "ToolTip": "C:\\.NET\\RabbitMQ\\1.HelloWorld\\Send\\Program.cs",
-              "RelativeToolTip": "1.HelloWorld\\Send\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T20:19:06.017Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Receive",
-              "DocumentMoniker": "C:\\.NET\\RabbitMQ\\1.HelloWorld\\Receive\\Receive.csproj",
-              "RelativeDocumentMoniker": "1.HelloWorld\\Receive\\Receive.csproj",
-              "ToolTip": "C:\\.NET\\RabbitMQ\\1.HelloWorld\\Receive\\Receive.csproj",
-              "RelativeToolTip": "1.HelloWorld\\Receive\\Receive.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-01T20:19:04.356Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Send",
-              "DocumentMoniker": "C:\\.NET\\RabbitMQ\\1.HelloWorld\\Send\\Send.csproj",
-              "RelativeDocumentMoniker": "1.HelloWorld\\Send\\Send.csproj",
-              "ToolTip": "C:\\.NET\\RabbitMQ\\1.HelloWorld\\Send\\Send.csproj",
-              "RelativeToolTip": "1.HelloWorld\\Send\\Send.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-01T20:19:01.831Z",
+              "WhenOpened": "2024-04-02T12:22:43.722Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\.NET\\RabbitMQ\\2.WorkQueues\\NewTask\\Program.cs",
-              "RelativeDocumentMoniker": "2.WorkQueues\\NewTask\\Program.cs",
-              "ToolTip": "C:\\.NET\\RabbitMQ\\2.WorkQueues\\NewTask\\Program.cs",
-              "RelativeToolTip": "2.WorkQueues\\NewTask\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAAAAAA",
+              "DocumentMoniker": "C:\\.NET\\RabbitMQ\\4.Routing\\ReceiveLogsDirect\\Program.cs",
+              "RelativeDocumentMoniker": "4.Routing\\ReceiveLogsDirect\\Program.cs",
+              "ToolTip": "C:\\.NET\\RabbitMQ\\4.Routing\\ReceiveLogsDirect\\Program.cs",
+              "RelativeToolTip": "4.Routing\\ReceiveLogsDirect\\Program.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAgwBkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T19:18:32.041Z",
+              "WhenOpened": "2024-04-02T11:47:47.289Z",
               "EditorCaption": ""
             }
           ]
