@@ -35,3 +35,8 @@ C:\.NET\Cache.WebAPI\obj\Debug\net8.0\ref\Cache.WebAPI.dll
 C:\.NET\Cache.WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 C:\.NET\Cache.WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\.NET\Cache.WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\.NET\Cache.WebAPI\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+C:\.NET\Cache.WebAPI\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
+C:\.NET\Cache.WebAPI\bin\Debug\net8.0\System.IO.Packaging.dll
+C:\.NET\Cache.WebAPI\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\.NET\Cache.WebAPI\bin\Debug\net8.0\StackExchange.Redis.dll

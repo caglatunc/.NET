@@ -2,7 +2,6 @@
 using CleanArchitecture.Application.Options;
 using CleanArchitecture.Domain.Entities;
 using FluentValidation;
-using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
@@ -18,7 +17,9 @@ public static class DependencyInjection
             configuration.RegisterServicesFromAssemblies(
                 typeof(DependencyInjection).Assembly,
                 typeof(AppUser).Assembly);
-            configuration.AddOpenBehavior(typeof(ValidationBehavior<,>));
+            configuration.AddOpenBehavior(typeof(ValidationBehavior<,>)
+                );
+            configuration.AddOpenBehavior(typeof(TestBehavior<,>));
         });
 
 

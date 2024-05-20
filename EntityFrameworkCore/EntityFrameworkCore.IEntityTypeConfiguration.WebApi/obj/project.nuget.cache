@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SR1rEVhNjursEJUElilqj4eAYS9NodYYLE0bAOJcH3Mhpz8dEh4f6X7aaRySSfCXbv8lMBn+vHLvOQwJT/xO7A==",
+  "dgSpecHash": "FxqbNcdOSJumRNM/+02ou1foZvcTLQF70wig+ypWZER204q1WjkGc2VoUrKwQNkN+HjybMnFeLnHlnGrT2Wu2Q==",
   "success": true,
   "projectFilePath": "C:\\.NET\\EntityFrameworkCore\\EntityFrameworkCore.IEntityTypeConfiguration.WebApi\\EntityFrameworkCore.IEntityTypeConfiguration.WebApi.csproj",
   "expectedPackageFiles": [

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "c8QQe9UuJTby2fyk7AxgJ2eQ8spOEN2Ut1d4pcRA9ZXb1GRCFI1qte0a+ML7/gBeOhXKxMgIijVNbBBRPCEVXw==",
+  "dgSpecHash": "+g1xIm6zGap6n887Toydwql6tkn6BGdHKMLKm8PKu3O+225s49f+JOI2ae6svTEeBjTPuqvTP631ZPhagzh+2Q==",
   "success": true,
   "projectFilePath": "C:\\.NET\\EntityFrameworkCore\\EntityFrameworkCore.Auth.WebApi\\EntityFrameworkCore.Auth.WebApi.csproj",
   "expectedPackageFiles": [

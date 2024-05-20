@@ -26,6 +26,5 @@ public sealed class ExceptionMiddleware : IExceptionHandler
         await httpContext.Response.WriteAsync(responseString);
 
         return true;
-
     }
 }
