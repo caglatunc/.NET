@@ -1,0 +1,2 @@
+2024-05-21 01:20:55.406 +03:00 [INF] Create işlemi başlıyor
+2024-05-21 01:20:55.418 +03:00 [INF] Create işlemi tamamlandı
